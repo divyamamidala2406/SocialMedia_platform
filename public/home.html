@@ -1,20 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Home</title>
+    <title>VIBELOOP • Home</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Bungee&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div class="box">
-    <h2>Social Media Platform</h2>
+<body class="fade-in">
 
-    <textarea id="postText" placeholder="What's on your mind?"></textarea>
-    <button onclick="createPost()">Post</button>
+<div class="container">
+    <h1 class="logo small">VIBELOOP</h1>
 
-    <div id="posts"></div>
+    <p class="quote">Welcome, <span id="user"></span>! </p>
+
+    <textarea placeholder="What's on your mind?"></textarea>
+   
+
+  
+
+<div class="camera-box"> 
+    <span id="cameraBtn" class="camera">📷 Add Image</span> 
+    <input type="file" id="imageInput" accept="image/*" hidden> 
 </div>
 
+
+    <button onclick="addPost()">Post</button>
+
+    <h3>Saved Posts ⭐</h3>
+    <div id="savedPosts"></div>
+</div>
+
+<div id="toast"></div>
+
 <script src="script.js"></script>
-<script>loadPosts();</script>
 </body>
 </html>

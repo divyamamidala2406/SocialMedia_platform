@@ -1,21 +1,262 @@
+/* ================================
+   GOOGLE FONTS
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Bungee&display=swap');
+
+/* ================================
+   VIBELOOP LOGO
+================================ */
+.logo {
+  font-family: 'Bungee', cursive;
+  font-size: 52px;
+  letter-spacing: 4px;
+  text-align: center;
+
+  /* Fallback color */
+  color: #de0d87;
+
+  /* Black → Violet → Pink gradient */
+  background: linear-gradient(
+    90deg,
+    #000000,
+    #6a2b78,
+    #e104a3
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Neon glow */
+  text-shadow:
+    0 0 8px rgba(126, 37, 153, 0.7),
+    0 0 14px rgba(236, 72, 153, 0.7);
+}
+
+/* Smaller logo (Home page) */
+.logo.small {
+  font-size: 38px;
+}
+
+/* ================================
+   DEFAULT STYLES
+================================ */
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* ================================
+   BACKGROUND PATTERN
+================================ */
 body {
-    font-family: Arial;
-    background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #160202, #e70fa2);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
-.box {
-    width: 400px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
+
+/* Background pattern only */
+body::before {
+  content: "";
+  position: fixed;          /* change from absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(222, 216, 216, 0.225) 0,
+    rgba(172, 168, 168, 0.284) 1px,
+    transparent 1px,
+    transparent 12px
+  );
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: -1;              /* send it behind everything */
 }
-textarea, input, button {
-    width: 100%;
-    margin-top: 10px;
-    padding: 8px;
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+.fade-in {
+  animation: fade 0.6s ease;
 }
-.post {
-    border: 1px solid #ccc;
-    margin-top: 10px;
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   CARD CONTAINER
+================================ */
+.container {
+  width: 420px;
+  max-width: 92%;
+  margin: 60px auto;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-y: auto; /* allow scrolling */
+}
+
+.container {
+    max-height: 80vh; /* height of post area */
+    overflow-y: auto; /* enable scroll */
     padding: 10px;
+}
+
+.post {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ================================
+   HEADINGS & TEXT
+================================ */
+h2, h3 {
+  text-align: center;
+  color: #4338ca;
+}
+
+.quote {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+/* ================================
+   FORM ELEMENTS
+================================ */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #0c0404;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+button {
+  width: 100%;
+  background: linear-gradient(90deg, #ff2fd4, #a855f7);
+  color: #120505;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Camera */
+.camera-box {
+  margin-top: 10px;
+}
+
+.camera {
+  cursor: pointer;
+  font-size: 18px;
+  color: #6d28d9;
+  font-weight: 600;
+}
+
+/* ================================
+   POSTS
+================================ */
+.post {
+  background: #f4f4ff;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  animation: fade 0.5s;
+}
+
+.post img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.time {
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* ================================
+   REACTIONS
+================================ */
+.reactions {
+  margin-top: 6px;
+}
+
+.reactions button {
+  width: auto;
+  margin-right: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ================================
+   SAVE BUTTON
+================================ */
+.save-btn {
+  background: none;
+  border: none;
+  color: #6d28d9;
+  cursor: pointer;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+/* ================================
+   TOAST MESSAGE
+================================ */
+#toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #111827;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  display: none;
+  z-index: 1000;
 }
