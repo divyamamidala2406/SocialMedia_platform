@@ -1,25 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>VIBELOOP • Login</title>
+  <title>VIBELOOP • Login</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Bungee&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Bungee&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="fade-in">
 
 <div class="container">
-    <h1 class="logo">VIBELOOP</h1>
-    <p class="quote">Post it • Loop it</p>
 
-    <input type="text" placeholder="Username">
-    <input type="password" placeholder="Password">
+  <h1 class="logo">VIBELOOP</h1>
+  <p class="quote">Post it • Loop it</p>
 
-<p id="warning" style="color:red; font-weight:bold; display:none;"></p>
+  <!-- LOGIN BOX -->
+  <div id="loginBox">
+    <input type="text" id="loginUsername" placeholder="Username">
+    <input type="password" id="loginPassword" placeholder="Password">
+
+    <p id="warning" style="display:none; color:red; font-weight:bold;"></p>
 
     <button onclick="login()">Login</button>
+
+    <p style="margin-top:10px;">
+      New here?
+      <span onclick="showSignup()" style="color:#6c63ff; cursor:pointer;">
+        Create Account
+      </span>
+    </p>
+  </div>
+
+  <!-- SIGNUP BOX -->
+  <div id="signupBox" style="display:none;">
+    <input type="text" id="signupUsername" placeholder="Username">
+    <input type="password" id="signupPassword" placeholder="Password">
+
+    <p id="signupWarning" style="display:none; color:red; font-weight:bold;"></p>
+
+    <button onclick="signup()">Create Account</button>
+
+    <p style="margin-top:10px;">
+      Already have an account?
+      <span onclick="showLogin()" style="color:#6c63ff; cursor:pointer;">
+        Login
+      </span>
+    </p>
+  </div>
+
 </div>
 
 <script src="script.js"></script>
