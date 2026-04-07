@@ -1,0 +1,5 @@
+node_modules/
+SocialMedia_platform-main/node_modules/
+.env
+npm-debug.log
+*.log
