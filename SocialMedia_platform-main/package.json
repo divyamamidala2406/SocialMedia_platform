@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "jest --forceExit"
   },
   "dependencies": {
     "cors": "^2.8.6",
@@ -13,14 +14,18 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vaarshhh/SocialMedia_platform.git"
+    "url": "git+https://github.com/divyamamidala2406/SocialMedia_platform.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/Vaarshhh/SocialMedia_platform/issues"
+    "url": "https://github.com/divyamamidala2406/SocialMedia_platform/issues"
   },
-  "homepage": "https://github.com/Vaarshhh/SocialMedia_platform#readme"
+  "homepage": "https://github.com/divyamamidala2406/SocialMedia_platform#readme",
+  "devDependencies": {
+    "jest": "^30.3.0",
+    "supertest": "^7.2.2"
+  }
 }
