@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VIBELOOP • Search</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .search-header {
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .search-header input {
+      width: 60%;
+      padding: 12px;
+      font-size: 16px;
+    }
+
+    .search-header button {
+      padding: 12px 20px;
+      margin-left: 5px;
+    }
+
+    .search-content {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .suggestion-card {
+      margin: 15px auto;
+      padding: 15px;
+      width: 300px;
+      border-radius: 10px;
+      background: #f4f4f4;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .suggestion-card:hover {
+      background: #e8e8e8;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🔍 Search Bar -->
+  <div class="search-header">
+    <input type="text" id="searchInput"
+      placeholder="Find people, discover trending users, and connect with the VIBELOOP community...">
+
+    <button onclick="searchUsers()">Search</button>
+  </div>
+
+  <!-- 🔎 SEARCH RESULTS (NEW SECTION) -->
+  <div class="search-results">
+    <div id="searchResults"></div>
+  </div>
+
+  <!-- 🔥 People You May Know -->
+  <div class="search-content">
+    <h2>🔥 People You May Know</h2>
+    <div id="suggestions"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
